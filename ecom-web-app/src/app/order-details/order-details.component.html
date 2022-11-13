@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-2">
 
   <div class="row">
     <div class="col-md-6">
@@ -24,11 +24,12 @@
         <div class="card-body">
           <table class="table table-sm">
             <thead>
-                <tr>
+                <tr class="bg-dark text-white">
                   <th>Product Id</th>
                   <th> Product Name</th>
                   <th>Quantity</th>
                   <th>Price</th> <th>Discount</th>
+                  <th>Amount</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,6 +39,11 @@
               <td>{{pi.quantity}}</td>
               <td class="text-end">{{pi.price | number:'.2'}}</td>
               <td class="text-end">{{pi.discount | number:'.2'}}</td>
+              <td class="text-end">{{pi.amount| number:'.2'}}</td>
+            </tr>
+            <tr class="bg-dark text-white">
+              <td colspan="5" class="text-end">Total</td>
+              <td class="text-end">{{orderDetails.total| number:'.2'}}</td>
             </tr>
             </tbody>
           </table>

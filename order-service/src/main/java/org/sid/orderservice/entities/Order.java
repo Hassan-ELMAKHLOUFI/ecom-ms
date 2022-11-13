@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.sid.orderservice.enums.OrderStatus;
 import org.sid.orderservice.model.Customer;
+import org.sid.orderservice.model.Product;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -27,4 +28,11 @@ public class Order {
     @OneToMany(mappedBy = "order" )
     private List<ProductItem> productItemList ;
 
+    public double getTotal(){
+        double somme = 0;
+        for (ProductItem pi : productItemList){
+            somme+= pi.getAmount();
+        }
+        return somme;
+    }
 }

@@ -1,27 +1,27 @@
 ## Démonstration
-- Consul service
+## Consul service
 
 ![](screens/1.png)
 
-- customer service
+## customer service
 
 ![](screens/2.png)
 
 ![](screens/3.png)
 
-- Inventory service
+## Inventory service
 
 ![](screens/4.png)
 
 ![](screens/5.png)
 
-- Order service
+-##Order service
 
 ![](screens/6.png)
 
 ![](screens/7.png)
 
-- configuration  service
+## configuration  service
 ```properties
 server.port=8888
 spring.application.name=config-service

@@ -1,0 +1,48 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Order ID: {{orderId}} </div>
+        <div class="card-body text-sm-start">
+          <ul class="list-group">
+            <li class="list-group-item"> Order Id : {{orderDetails.id}} </li>
+            <li class="list-group-item"> Date : {{orderDetails.createdAt | date: 'dd/MM/yyyy'}} </li>
+            <li class="list-group-item"> Customer Email : {{orderDetails.status}} </li>
+            <li class="list-group-item"> Customer Id : {{orderDetails.customer.id}} </li>
+            <li class="list-group-item"> Customer Name : {{orderDetails.customer.name}} </li>
+            <li class="list-group-item"> Customer Email : {{orderDetails.customer.email}} </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Product Items
+        </div>
+        <div class="card-body">
+          <table class="table table-sm">
+            <thead>
+                <tr>
+                  <th>Product Id</th>
+                  <th> Product Name</th>
+                  <th>Quantity</th>
+                  <th>Price</th> <th>Discount</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let pi of orderDetails.productItemList">
+              <td>{{pi.product.id}}</td>
+              <td>{{pi.product.name}}</td>
+              <td>{{pi.quantity}}</td>
+              <td class="text-end">{{pi.price | number:'.2'}}</td>
+              <td class="text-end">{{pi.discount | number:'.2'}}</td>
+            </tr>
+            </tbody>
+          </table>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>

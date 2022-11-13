@@ -23,7 +23,7 @@ public class InventoryServiceApplication {
 		return args -> {
 			for (int i = 1; i < 10; i++) {
 				productRepository.saveAll(List.of(
-						Product.builder().name("Computer "+i).price(Math.random()*1000).quantity((int)Math.random()*100).build()
+						Product.builder().name("Computer "+i).price(Math.random()*1000).quantity((int) (Math.random()*100)).build()
 				));
 			}
 

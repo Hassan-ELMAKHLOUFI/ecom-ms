@@ -32,8 +32,11 @@ spring.cloud.config.server.git.uri=file:/home/hassan/Documents/Projets/spring/ec
 ![](screens/8.png)
 
 ## Front end
+## Customer
 ![](screens/9.png)
+## Order
 ![](screens/10.png)
+## Order details
 ![](screens/11.png)
 ![](screens/12.png)
 ![](screens/13.png)
